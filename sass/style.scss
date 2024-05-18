@@ -1,7 +1,5 @@
 
 @import "globalCss/fonts";
-@import "globalCss/reset";
-@import "globalCss/styles";
 @import "globalCss/typography";
 
 @import "blockRelatedStyles/about";
@@ -15,8 +13,6 @@
 
 @import "compositionRelatedStyles/layout";
 
-@import "utilityStyles/links";
-@import "utilityStyles/logomark";
 @import "utilityStyles/theme";
 
 // You can modify the theme directly, or override some of the variables

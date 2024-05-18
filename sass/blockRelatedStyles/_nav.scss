@@ -1,35 +1,63 @@
+@import "../utilityStyles/theme"; 
+
 nav {
+  background-color: $color-background;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  
   ul {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    margin: 0;
-    padding: 0;
-    list-style: none;
 
-    a {
-      display: inline-grid;
-      padding: 0.5rem;
-      color: var(--color-secondary);
-      font-size: 1.25rem;
-      text-decoration: none;
-
-      &::before {
-        width: 100%;
-        height: 0.33em;
-        background-color: var(--color-secondary);
-        opacity: 0.15;
-        content: "";
+    li{
+      margin: 10px;
+      padding: 10px;
+      
+      a{
+        color:white; 
+        text-decoration: none;
       }
 
-      &:hover::before,
-      &:focus::before {
-        opacity: 1;
-      }
     }
 
-    li {
-      margin: 0.25rem;
-    }
   }
+
 }
+
+
+// nav {
+//   ul {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     margin: 0;
+//     padding: 0;
+//     list-style: none;
+
+//     a {
+//       display: inline-grid;
+//       padding: 0.5rem;
+//       color: var(--color-secondary);
+//       font-size: 1.25rem;
+//       text-decoration: none;
+
+//       &::before {
+//         width: 100%;
+//         height: 0.33em;
+//         background-color: var(--color-secondary);
+//         opacity: 0.15;
+//         content: "";
+//       }
+
+//       &:hover::before,
+//       &:focus::before {
+//         opacity: 1;
+//       }
+//     }
+
+//     li {
+//       margin: 0.25rem;
+//     }
+//   }
+// }
