@@ -4,12 +4,102 @@ h2,
 h3,
 h4 {
   font-family: "Sarabun", sans-serif;
+  margin: 0;
 }
 
 p,
 a,
 li {
   font-family: "Noto Sans JP", sans-serif;
+  margin: 0;
+}
+
+:root {
+  --color-primary: #FAFAFA;
+  --color-primary-alt: #E11D48;
+  --color-secondary: #d42257;
+  --color-background: #09090B;
+  --color-text: #afafaf;
+  --color-light: #fff;
+  --color-anchor: #FAFAFA;
+  --font-family: "Baloo 2", sans-serif;
+  --font-weight-strong: 500;
+  --font-size-h1: 6rem;
+  --font-size-h2: 3rem;
+  --font-size-h3: 2rem;
+  --font-size-h4: 1.35rem;
+  --font-size-text: 1.15rem;
+  --border-radius: 8px;
+}
+
+#about {
+  background-color: #09090B;
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+}
+#about .container {
+  width: 500px;
+  background-color: #1C1917;
+  padding: 10px;
+  color: #FAFAFA;
+  border-radius: 10px;
+}
+#about .container:nth-child(1) {
+  margin-left: 55%;
+}
+#about .container:nth-child(2) {
+  margin-left: 10%;
+}
+
+:root {
+  --color-primary: #FAFAFA;
+  --color-primary-alt: #E11D48;
+  --color-secondary: #d42257;
+  --color-background: #09090B;
+  --color-text: #afafaf;
+  --color-light: #fff;
+  --color-anchor: #FAFAFA;
+  --font-family: "Baloo 2", sans-serif;
+  --font-weight-strong: 500;
+  --font-size-h1: 6rem;
+  --font-size-h2: 3rem;
+  --font-size-h3: 2rem;
+  --font-size-h4: 1.35rem;
+  --font-size-text: 1.15rem;
+  --border-radius: 8px;
+}
+
+header {
+  background-color: aqua;
+  position: relative;
+  height: 500px;
+}
+header .container {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  text-align: center;
+}
+header .container h1, header .container h2, header .container p {
+  margin: 10px;
+}
+header .container .link-github {
+  background-color: #E11D48;
+  color: #FAFAFA;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 30%;
+  margin: 0 auto;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+header .container .link-github svg {
+  width: 20px;
+  margin-right: 10px;
+  fill: #FAFAFA;
 }
 
 :root {
@@ -35,6 +125,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+  border-bottom: 5px #E11D48 solid;
 }
 nav ul {
   display: flex;
@@ -47,6 +138,24 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
+}
+
+:root {
+  --color-primary: #FAFAFA;
+  --color-primary-alt: #E11D48;
+  --color-secondary: #d42257;
+  --color-background: #09090B;
+  --color-text: #afafaf;
+  --color-light: #fff;
+  --color-anchor: #FAFAFA;
+  --font-family: "Baloo 2", sans-serif;
+  --font-weight-strong: 500;
+  --font-size-h1: 6rem;
+  --font-size-h2: 3rem;
+  --font-size-h3: 2rem;
+  --font-size-h4: 1.35rem;
+  --font-size-text: 1.15rem;
+  --border-radius: 8px;
 }
 
 body {
