@@ -34,9 +34,11 @@ li {
 
 #about {
   background-color: #09090B;
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  padding: 20px 0;
+  padding: 50px 0;
+  justify-content: space-evenly;
 }
 #about .container {
   width: 500px;
@@ -45,11 +47,26 @@ li {
   color: #FAFAFA;
   border-radius: 10px;
 }
-#about .container:nth-child(1) {
-  margin-left: 55%;
+#about .container h2 {
+  margin-bottom: 20px;
 }
-#about .container:nth-child(2) {
-  margin-left: 10%;
+#about .container p {
+  line-height: 1.5em;
+}
+#about .container a {
+  color: #E11D48;
+}
+#about .container ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 10px;
+}
+#about .container ul li {
+  padding: 10px;
+  margin: 10px;
+  background-color: #E11D48;
+  border-radius: 10%;
 }
 
 :root {
@@ -71,35 +88,51 @@ li {
 }
 
 header {
-  background-color: aqua;
+  background-color: #E11D48;
+  background-image: url("https://svgsilh.com/svg/980280.svg");
+  background-repeat: no-repeat;
+  /* Don't repeat the image */
+  background-position: center;
+  /* Center the image */
+  background-size: cover;
+  /* Scale the image to cover the entire body */
+  background-attachment: fixed;
+  /* Keep the image static when scrolling */
+  background-size: 110%;
+  /* Scales down to 80% of the body's width */
   position: relative;
   height: 500px;
 }
 header .container {
   position: absolute;
-  top: 25%;
-  left: 25%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
 }
 header .container h1, header .container h2, header .container p {
+  color: #FAFAFA;
   margin: 10px;
 }
-header .container .link-github {
-  background-color: #E11D48;
+header .container a {
   color: #FAFAFA;
+}
+header .container .link-github {
+  background-color: #FAFAFA;
+  color: #E11D48;
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 30%;
-  margin: 0 auto;
+  margin: 30px auto;
   padding: 10px 0;
   border-radius: 10px;
 }
 header .container .link-github svg {
   width: 20px;
   margin-right: 10px;
-  fill: #FAFAFA;
+  fill: #E11D48;
 }
 
 :root {
@@ -159,7 +192,11 @@ nav ul li a {
 }
 
 body {
-  margin: 100px 0 0 0;
+  margin: 90px 0 0 0;
+}
+
+.skip-link {
+  display: none;
 }
 
 :root {

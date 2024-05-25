@@ -64,9 +64,11 @@
 
 #about {
     background-color: $color-background;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    padding: 20px 0;
+    padding: 50px 0;
+    justify-content: space-evenly;
 
     .container {
         width: 500px;
@@ -74,13 +76,40 @@
         padding: 10px;
         color: $color-primary;
         border-radius: 10px;
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.5em;
+        }
+
+        a {
+            color: $color-primary-alt;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style-type: none;
+            padding: 10px;
+
+            li {
+                padding: 10px;
+                margin: 10px;
+                background-color: $color-primary-alt;
+                border-radius: 10%;
+            }
+        }
+
       }
       
-      .container:nth-child(1) {
-        margin-left: 55%;
-      }
+    //   .container:nth-child(1) {
+    //     margin-left: 50%;
+    //   }
       
-      .container:nth-child(2) {
-        margin-left: 10%;
-      }
+    //   .container:nth-child(2) {
+    //     margin-left: 15%;
+    //   }
 }

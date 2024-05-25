@@ -26,36 +26,48 @@
 @import "../utilityStyles/theme"; 
 
 header {
-    background-color: aqua;
+    background-color: $color-primary-alt;
+    background-image: url("https://svgsilh.com/svg/980280.svg");
+    background-repeat: no-repeat;  /* Don't repeat the image */
+    background-position: center;  /* Center the image */
+    background-size: cover;       /* Scale the image to cover the entire body */
+    background-attachment: fixed;  /* Keep the image static when scrolling */
+    background-size: 110%; /* Scales down to 80% of the body's width */
     position: relative;
     height: 500px;
 
     .container {
         position: absolute;
-        top: 25%;
-        left: 25%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         text-align: center;
 
         h1, h2, p {
+            color: $color-primary;
             margin: 10px;
         }
 
-        .link-github {
-            background-color: $color-primary-alt;
+        a{
             color: $color-primary;
+        }
+
+        .link-github {
+            background-color: $color-primary;
+            color: $color-primary-alt;
             text-decoration: none;
             display: flex;
             align-items: center;
             justify-content: center;
             max-width: 30%;
-            margin: 0 auto;
+            margin: 30px auto;
             padding: 10px 0;
             border-radius: 10px;
 
             svg {
                 width: 20px;
                 margin-right: 10px;
-                fill: $color-primary;
+                fill: $color-primary-alt;
             }
         }
 
