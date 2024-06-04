@@ -34,3 +34,33 @@
 //     @media (max-width: 35rem) {
 //       #about section:nth-child(2)::before {
 //         transform: scale(2) translate(-25%, -25%); } }
+
+@import "../utilityStyles/_theme.scss";
+
+// Contribute Section
+
+#contribute .container:first-child {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+  background-color: $color-background;
+}
+
+#contribute .container:first-child h2 {
+  padding-bottom: 20px;
+}
+
+#contribute .container:first-child h2,
+p {
+  color: $color-primary;
+}
+
+#contribute .container:first-child a {
+  color: $color-secondary;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+#contribute .container:first-child a:hover {
+  color: $color-primary;
+}
