@@ -73,6 +73,50 @@ li {
   transform: scale(1.3);
 }
 
+:root {
+  --color-primary: #FAFAFA;
+  --color-primary-alt: #E11D48;
+  --color-secondary: #d42257;
+  --color-background: #09090B;
+  --color-text: #afafaf;
+  --color-light: #fff;
+  --color-anchor: #FAFAFA;
+  --font-family: "Baloo 2", sans-serif;
+  --font-weight-strong: 500;
+  --font-size-h1: 6rem;
+  --font-size-h2: 3rem;
+  --font-size-h3: 2rem;
+  --font-size-h4: 1.35rem;
+  --font-size-text: 1.15rem;
+  --border-radius: 8px;
+}
+
+#contribute .container:first-child {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+  background-color: #09090B;
+}
+
+#contribute .container:first-child h2 {
+  padding-bottom: 20px;
+}
+
+#contribute .container:first-child h2,
+p {
+  color: #FAFAFA;
+}
+
+#contribute .container:first-child a {
+  color: #d42257;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+#contribute .container:first-child a:hover {
+  color: #FAFAFA;
+}
+
 /* Footer */
 .page-footer {
   background-color: #333;
@@ -177,16 +221,11 @@ li {
 header {
   background-color: #E11D48;
   background-image: url("https://svgsilh.com/svg/980280.svg");
-  background-repeat: no-repeat;
-  /* Don't repeat the image */
-  background-position: center;
-  /* Center the image */
-  background-size: cover;
-  /* Scale the image to cover the entire body */
-  background-attachment: fixed;
-  /* Keep the image static when scrolling */
-  background-size: 110%;
-  /* Scales down to 80% of the body's width */
+  background-repeat: no-repeat; /* Don't repeat the image */
+  background-position: center; /* Center the image */
+  background-size: cover; /* Scale the image to cover the entire body */
+  background-attachment: fixed; /* Keep the image static when scrolling */
+  background-size: 110%; /* Scales down to 80% of the body's width */
   position: relative;
   height: 500px;
 }
@@ -303,3 +342,5 @@ body {
   --font-size-text: 1.15rem;
   --border-radius: 8px;
 }
+
+/*# sourceMappingURL=style.css.map */
