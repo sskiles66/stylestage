@@ -25,3 +25,20 @@
 //     }
 //   }
 // }
+
+@import "../utilityStyles/_theme.scss";
+
+#contribute #files .container {
+  background-color: $color-card;
+  border-radius: 10px;
+  max-width: 500px;
+}
+
+#files .container h3 {
+  color: $color-primary;
+  padding-bottom: 4px;
+}
+
+#files .container a {
+  font-size: 20px;
+}
