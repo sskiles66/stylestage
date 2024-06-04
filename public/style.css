@@ -91,11 +91,18 @@ li {
   --border-radius: 8px;
 }
 
+#contribute {
+  background-color: var(--color-background);
+  padding-bottom: 150px;
+}
+
 #contribute .container:first-child {
   padding-top: 25px;
   padding-bottom: 25px;
   text-align: center;
   background-color: #09090B;
+  max-width: 800px;
+  margin: 0px auto;
 }
 
 #contribute .container:first-child h2 {
@@ -119,11 +126,13 @@ p {
 
 #contribute .container:nth-child(2) {
   padding-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 75px;
   color: #FAFAFA;
   background-color: #09090B;
   text-align: center;
   list-style-position: inside;
+  max-width: 850px;
+  margin: 0px auto;
 }
 
 #contribute .container:nth-child(2) ol {
@@ -139,6 +148,39 @@ p {
 
 #contribute .container:nth-child(2) a:hover {
   color: #FAFAFA;
+}
+
+:root {
+  --color-primary: #FAFAFA;
+  --color-primary-alt: #E11D48;
+  --color-secondary: #d42257;
+  --color-background: #09090B;
+  --color-text: #afafaf;
+  --color-light: #fff;
+  --color-anchor: #FAFAFA;
+  --font-family: "Baloo 2", sans-serif;
+  --font-weight-strong: 500;
+  --font-size-h1: 6rem;
+  --font-size-h2: 3rem;
+  --font-size-h3: 2rem;
+  --font-size-h4: 1.35rem;
+  --font-size-text: 1.15rem;
+  --border-radius: 8px;
+}
+
+#contribute #files .container {
+  background-color: #1C1917;
+  border-radius: 10px;
+  max-width: 500px;
+}
+
+#files .container h3 {
+  color: #FAFAFA;
+  padding-bottom: 4px;
+}
+
+#files .container a {
+  font-size: 20px;
 }
 
 /* Footer */
@@ -321,6 +363,28 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
+}
+
+:root {
+  --color-primary: #FAFAFA;
+  --color-primary-alt: #E11D48;
+  --color-secondary: #d42257;
+  --color-background: #09090B;
+  --color-text: #afafaf;
+  --color-light: #fff;
+  --color-anchor: #FAFAFA;
+  --font-family: "Baloo 2", sans-serif;
+  --font-weight-strong: 500;
+  --font-size-h1: 6rem;
+  --font-size-h2: 3rem;
+  --font-size-h3: 2rem;
+  --font-size-h4: 1.35rem;
+  --font-size-text: 1.15rem;
+  --border-radius: 8px;
+}
+
+#main #contribute .profile .container {
+  background-color: #FAFAFA;
 }
 
 :root {
