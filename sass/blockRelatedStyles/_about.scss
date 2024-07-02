@@ -47,6 +47,7 @@
         background-color: $color-primary-alt;
         border-radius: 10%;
         transition: transform 0.3s ease-in-out;
+        color: $color-primary;
 
         &:hover {
           transform: scale(1.1);

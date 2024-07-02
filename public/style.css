@@ -92,6 +92,7 @@ li {
   background-color: #E11D48;
   border-radius: 10%;
   transition: transform 0.3s ease-in-out;
+  color: #FAFAFA;
 }
 #about .container ul li:hover {
   transform: scale(1.1);
@@ -312,6 +313,7 @@ p {
   transition: background-color 0.3s ease-in-out;
 }
 #guidelines .container .link-guidelines:hover {
+  color: #d42257;
   background-color: var(--color-primary);
 }
 
