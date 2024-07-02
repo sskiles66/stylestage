@@ -1,0 +1,75 @@
+// styles.scss
+
+@import "../utilityStyles/theme";
+
+#styles {
+  background-color: $color-background;
+  padding: 50px 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    background-color: $color-card;
+    width: 400px; /* Set the container width */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+
+    h2 {
+      color: $color-primary;
+      margin-bottom: 20px;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 20px;
+
+        span {
+          display: block;
+          color: $color-primary;
+          margin-bottom: 10px;
+
+    a {
+      display: block;
+      color: $color-primary-alt;
+      text-decoration: none;
+      margin: 10px;
+      border-radius: 3px;
+      padding: 10px;
+      text-align: center;
+      background-color: $color-background;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+        }
+      }
+    }
+
+    .link-allstyles {
+      display: block;
+      color: $color-primary-alt; 
+      text-decoration: none;
+      margin: 10px;
+      border-radius: 3px;
+      padding: 10px 20px; 
+      text-align: center;
+      background-color: $color-background;
+      transition: background-color 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $color-primary-alt;
+        color: $color-primary; // Ensure text color changes on hover
+      }
+    }
+  }
+}

@@ -336,16 +336,11 @@ p {
 header {
   background-color: #E11D48;
   background-image: url("https://svgsilh.com/svg/980280.svg");
-  background-repeat: no-repeat;
-  /* Don't repeat the image */
-  background-position: center;
-  /* Center the image */
-  background-size: cover;
-  /* Scale the image to cover the entire body */
-  background-attachment: fixed;
-  /* Keep the image static when scrolling */
-  background-size: 110%;
-  /* Scales down to 80% of the body's width */
+  background-repeat: no-repeat; /* Don't repeat the image */
+  background-position: center; /* Center the image */
+  background-size: cover; /* Scale the image to cover the entire body */
+  background-attachment: fixed; /* Keep the image static when scrolling */
+  background-size: 110%; /* Scales down to 80% of the body's width */
   position: relative;
   height: 500px;
 }
@@ -517,8 +512,7 @@ nav ul li a {
 }
 #styles .container {
   background-color: #1C1917;
-  width: 400px;
-  /* Set the container width */
+  width: 400px; /* Set the container width */
   padding: 20px;
   display: flex;
   align-items: center;
@@ -596,3 +590,5 @@ body {
 .skip-link {
   display: none;
 }
+
+/*# sourceMappingURL=style.css.map */

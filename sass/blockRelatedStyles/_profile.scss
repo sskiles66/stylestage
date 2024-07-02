@@ -1,5 +1,62 @@
-@import "../utilityStyles/_theme.scss";
+@import "../utilityStyles/theme";
 
-#main #contribute .profile .container {
-  background-color: $color-primary;
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: $color-card;
+  padding: 50px 0;
+
+  .container {
+    background-color: $color-background;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+
+    h4 {
+      color: $color-primary;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        span {
+          font-weight: bold;
+          color: $color-primary;
+        }
+
+        a {
+          color: $color-primary-alt;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    a {
+      display: block;
+      color: $color-primary-alt;
+      text-decoration: none;
+      margin: 10px;
+      border-radius: 3px;
+      padding: 10px;
+      text-align: center;
+      background-color: $color-card;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }

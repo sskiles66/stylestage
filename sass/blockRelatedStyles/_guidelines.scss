@@ -1,54 +1,14 @@
-// #guidelines {
-//   h3 {
-//     display: inline-block;
-//     transform: rotate(-8deg) translateX(-10%);
-//     background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
-
-//     @supports (background-clip: text) or (-webkit-background-clip: text) {
-//       -webkit-background-clip: text;
-//       background-clip: text;
-//       color: transparent;
-//     }
-
-//     @media (min-width: 120ch) {
-//       transform: rotate(-8deg) translateX(-30%);
-//     }
-//   }
-
-//   @supports (background-clip: text) or (-webkit-background-clip: text) {
-//     p:nth-of-type(2) {
-//       position: relative;
-
-//       &::before {
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         transform: rotate(4deg) translate(4.75rem, -3.5rem);
-//         transform-origin: left center;
-//         -webkit-background-clip: text;
-//         background-clip: text;
-//         color: var(--color-primary-alt);
-//         font-size: 0.9em;
-//         font-weight: normal;
-//         content: "← Whoa, text gradients!";
-//       }
-//     }
-//   }
-
-//   .container > a {
-//     align-self: center;
-//   }
-// }
-
+@import "../utilityStyles/_theme.scss";
 /* Guidelines Section */
 #guidelines {
-  background-color: var(--color-background);
-  padding: 50px 0;
+  background-color: $color-card;
+  padding: 50px;
   text-align: center;
 
   .container {
     max-width: 800px;
     margin: 0 auto;
+    font-size: larger;
     color: var(--color-primary);
 
     h2 {
@@ -61,7 +21,7 @@
 
     p {
       line-height: 1.5em;
-      margin-bottom: 10px;
+      padding-bottom: 50px;
     }
 
     a {

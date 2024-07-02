@@ -1,7 +1,9 @@
-
+// Import global styles and variables
 @import "globalCss/fonts";
 @import "globalCss/typography";
+@import "utilityStyles/theme"; 
 
+// Import block-related styles
 @import "blockRelatedStyles/about";
 @import "blockRelatedStyles/contribute";
 @import "blockRelatedStyles/files";
@@ -10,12 +12,7 @@
 @import "blockRelatedStyles/header";
 @import "blockRelatedStyles/nav";
 @import "blockRelatedStyles/profile";
+@import "blockRelatedStyles/styleSection";
 
+// Import composition-related styles
 @import "compositionRelatedStyles/layout";
-
-@import "utilityStyles/theme";
-
-// You can modify the theme directly, or override some of the variables
-// Overrides just need placed prior to the theme import
-// For example:
-// $color-primary: #3a0;
