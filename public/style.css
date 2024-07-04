@@ -199,17 +199,15 @@ p {
   --border-radius: 8px;
 }
 
-#contribute #files .container {
+#files .container {
   background-color: #1C1917;
   border-radius: 10px;
   max-width: 325px;
 }
-
 #files .container h3 {
   color: #FAFAFA;
   padding-bottom: 30px;
 }
-
 #files .container a {
   font-size: 20px;
 }
@@ -339,15 +337,10 @@ header {
   background-color: #E11D48;
   background-image: url("https://svgsilh.com/svg/980280.svg");
   background-repeat: no-repeat;
-  /* Don't repeat the image */
   background-position: center;
-  /* Center the image */
   background-size: cover;
-  /* Scale the image to cover the entire body */
   background-attachment: fixed;
-  /* Keep the image static when scrolling */
   background-size: 110%;
-  /* Scales down to 80% of the body's width */
   position: relative;
   height: 500px;
 }

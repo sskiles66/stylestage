@@ -3,11 +3,11 @@
 header {
     background-color: $color-primary-alt;
     background-image: url("https://svgsilh.com/svg/980280.svg");
-    background-repeat: no-repeat;  /* Don't repeat the image */
-    background-position: center;  /* Center the image */
-    background-size: cover;       /* Scale the image to cover the entire body */
-    background-attachment: fixed;  /* Keep the image static when scrolling */
-    background-size: 110%; /* Scales down to 80% of the body's width */
+    background-repeat: no-repeat;  
+    background-position: center; 
+    background-size: cover;       
+    background-attachment: fixed; 
+    background-size: 110%; 
     position: relative;
     height: 500px;
 
