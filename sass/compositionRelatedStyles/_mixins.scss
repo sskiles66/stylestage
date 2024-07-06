@@ -1,0 +1,16 @@
+
+$breakpoints: (
+  "small": 600px,
+);
+
+
+@mixin respond($size) {
+
+  $query: map-get($breakpoints, $size);
+
+  @media (max-width: $query) {
+
+    @content;
+    
+  }
+}

@@ -344,12 +344,22 @@ header {
   position: relative;
   height: 500px;
 }
+@media (max-width: 600px) {
+  header {
+    margin-top: 150px;
+  }
+}
 header .container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+@media (max-width: 600px) {
+  header .container {
+    width: 300px;
+  }
 }
 header .container h1, header .container h2, header .container p {
   color: #FAFAFA;
@@ -369,6 +379,11 @@ header .container .link-github {
   margin: 30px auto;
   padding: 10px 0;
   border-radius: 10px;
+}
+@media (max-width: 600px) {
+  header .container .link-github {
+    max-width: 50%;
+  }
 }
 header .container .link-github svg {
   width: 20px;
@@ -404,6 +419,14 @@ nav {
 nav ul {
   display: flex;
   justify-content: center;
+}
+@media (max-width: 600px) {
+  nav ul {
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
 }
 nav ul li {
   margin: 10px;

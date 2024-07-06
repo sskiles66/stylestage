@@ -1,6 +1,8 @@
+@use "../compositionRelatedStyles/mixins" as mixins;
 @import "../utilityStyles/theme"; 
 
 header {
+
     background-color: $color-primary-alt;
     background-image: url("https://svgsilh.com/svg/980280.svg");
     background-repeat: no-repeat;  
@@ -11,12 +13,21 @@ header {
     position: relative;
     height: 500px;
 
+    
+    @include mixins.respond(small) {
+        margin-top: 150px;
+    }
+
     .container {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+
+        @include mixins.respond(small) {
+            width: 300px;
+        }
 
         h1, h2, p {
             color: $color-primary;
@@ -38,6 +49,10 @@ header {
             margin: 30px auto;
             padding: 10px 0;
             border-radius: 10px;
+
+            @include mixins.respond(small) {
+                max-width: 50%;
+            }
 
             svg {
                 width: 20px;
