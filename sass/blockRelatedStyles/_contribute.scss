@@ -1,62 +1,60 @@
 @import "../utilityStyles/_theme.scss";
 
-// Contribute Section
-
 #contribute {
   background-color: var(--color-background);
   padding-bottom: 150px;
-}
 
-#contribute .container:first-child {
-  padding: 25px;
-  text-align: center;
-  background-color: $color-background;
-  max-width: 800px;
-  margin: 0px auto;
-}
+  .container:first-child {
+    padding: 25px;
+    text-align: center;
+    background-color: $color-background;
+    max-width: 800px;
+    margin: 0px auto;
 
-#contribute .container:first-child h2 {
-  padding-bottom: 20px;
-}
+    h2 {
+      padding-bottom: 20px;
+    }
 
-#contribute .container:first-child h2,
-p {
-  color: $color-primary;
-}
+    h2,
+    p {
+      color: $color-primary;
+    }
 
-#contribute .container:first-child a {
-  color: $color-secondary;
-  transition: 0.3s ease;
-  text-decoration: none;
-}
+    a {
+      color: $color-secondary;
+      transition: 0.3s ease;
+      text-decoration: none;
 
-#contribute .container:first-child a:hover {
-  color: $color-primary;
-}
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
 
-#contribute .container:nth-child(2) {
-  padding: 25px;
-  color: $color-primary;
-  background-color: $color-background;
-  text-align: center;
-  list-style-position: inside;
-  font-size: larger;
-  line-height: 2em;
-  max-width: 850px;
-  margin: 0px auto;
-}
+  .container:nth-child(2) {
+    padding: 25px;
+    color: $color-primary;
+    background-color: $color-background;
+    text-align: center;
+    list-style-position: inside;
+    font-size: larger;
+    line-height: 2em;
+    max-width: 850px;
+    margin: 0px auto;
 
-#contribute .container:nth-child(2) ol {
-  display: inline-block;
-  text-align: left;
-}
+    ol {
+      display: inline-block;
+      text-align: left;
+    }
 
-#contribute .container:nth-child(2) a {
-  color: $color-secondary;
-  transition: 0.3s ease;
-  text-decoration: none;
-}
+    a {
+      color: $color-secondary;
+      transition: 0.3s ease;
+      text-decoration: none;
 
-#contribute .container:nth-child(2) a:hover {
-  color: $color-primary;
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
 }
