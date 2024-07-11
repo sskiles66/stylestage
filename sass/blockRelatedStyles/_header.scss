@@ -1,3 +1,5 @@
+/*Background svg is from this website that has content under Creative Commons
+https://svgsilh.com/image/980280.html*/
 @use "../compositionRelatedStyles/mixins" as mixins;
 @import "../utilityStyles/theme";
 
@@ -13,7 +15,15 @@ header {
   height: 500px;
 
   @include mixins.respond(small) {
+    margin-top: 200px;
+  }
+
+  @include mixins.respond(medium) {
     margin-top: 150px;
+  }
+
+  @include mixins.respond(large) {
+    margin-top: 80px;
   }
 
   .container {
@@ -25,6 +35,10 @@ header {
 
     @include mixins.respond(small) {
       width: 300px;
+    }
+
+    @include mixins.respond(large) {
+      width: 500px;
     }
 
     h1, h2, p {
@@ -47,7 +61,7 @@ header {
       margin: 30px auto;
       padding: 10px 0;
       border-radius: 10px;
-      border: 2px solid transparent;  // initial border
+      border: 2px solid transparent;  
       transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 
       @include mixins.respond(small) {
@@ -64,17 +78,17 @@ header {
       &:hover {
         background-color: $color-primary-alt;
         color: $color-primary;
-        border-color: #000;  // change border to black on hover
+        border-color: #000; 
 
         svg {
           fill: $color-primary;
-          transform: rotate(360deg);  // spin the star on hover
+          transform: rotate(360deg);  
         }
       }
 
       &.white-hover {
         &:hover {
-          border-color: #fff;  // change border to white on hover
+          border-color: #fff;  
         }
       }
     }

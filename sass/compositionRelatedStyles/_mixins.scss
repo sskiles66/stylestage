@@ -1,7 +1,7 @@
 $breakpoints: (
   "small": 600px,
-  "medium": 1000px,
-  "large": 1150px, 
+  "medium": 1150px,
+  "large": 1151px
 );
 
 @mixin respond($size) {
@@ -9,6 +9,11 @@ $breakpoints: (
 
   @if ($size == "small") {
     @media (max-width: $query) { 
+      @content;
+    }
+  }
+  @if ($size == "medium") {
+    @media (max-width: $query) and (min-width: 601px) { 
       @content;
     }
   } @else {

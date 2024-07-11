@@ -12,7 +12,7 @@
 
   .container {
     background-color: $color-card;
-    width: 400px; /* Set the container width */
+    width: 400px; 
     padding: 20px;
     display: flex;
     align-items: center;
@@ -39,7 +39,7 @@
 
     a {
       display: block;
-      color: $color-primary-alt;
+      color: $color-contrast;
       text-decoration: none;
       margin: 10px;
       border-radius: 3px;
@@ -68,7 +68,7 @@
 
       &:hover {
         background-color: $color-primary-alt;
-        color: $color-primary; // Ensure text color changes on hover
+        color: $color-primary; 
       }
     }
   }

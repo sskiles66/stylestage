@@ -74,7 +74,7 @@ li {
   color: #FAFAFA;
 }
 #about .container a {
-  color: #E11D48;
+  color: #EF8198;
   text-decoration: none;
 }
 #about .container a:hover {
@@ -141,7 +141,7 @@ li {
   color: #FAFAFA;
 }
 #contribute .container:first-child a {
-  color: #d42257;
+  color: #EF8198;
   transition: 0.3s ease;
   text-decoration: none;
 }
@@ -164,7 +164,7 @@ li {
   text-align: left;
 }
 #contribute .container:nth-child(2) a {
-  color: #d42257;
+  color: #EF8198;
   transition: 0.3s ease;
   text-decoration: none;
 }
@@ -203,6 +203,24 @@ li {
   font-size: 20px;
 }
 
+:root {
+  --color-primary: #FAFAFA;
+  --color-primary-alt: #E11D48;
+  --color-secondary: #d42257;
+  --color-background: #09090B;
+  --color-text: #afafaf;
+  --color-light: #fff;
+  --color-anchor: color(primary);
+  --font-family: "Baloo 2", sans-serif;
+  --font-weight-strong: 500;
+  --font-size-h1: 6rem;
+  --font-size-h2: 3rem;
+  --font-size-h3: 2rem;
+  --font-size-h4: 1.35rem;
+  --font-size-text: 1.15rem;
+  --border-radius: 8px;
+}
+
 /* Footer */
 .page-footer {
   background-color: #333;
@@ -219,7 +237,7 @@ li {
   margin: 10px 0;
 }
 .page-footer a {
-  color: var(--color-primary-alt);
+  color: #EF8198;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
@@ -286,7 +304,7 @@ li {
   padding-bottom: 50px;
 }
 #guidelines .container a {
-  color: var(--color-primary-alt);
+  color: #EF8198;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
@@ -306,6 +324,8 @@ li {
   background-color: var(--color-primary);
 }
 
+/*Background svg is from this website that has content under Creative Commons
+https://svgsilh.com/image/980280.html*/
 :root {
   --color-primary: #FAFAFA;
   --color-primary-alt: #E11D48;
@@ -337,7 +357,22 @@ header {
 }
 @media (max-width: 600px) {
   header {
+    margin-top: 200px;
+  }
+}
+@media (min-width: 600px) {
+  header {
+    margin-top: 200px;
+  }
+}
+@media (max-width: 1150px) and (min-width: 601px) {
+  header {
     margin-top: 150px;
+  }
+}
+@media (min-width: 1151px) {
+  header {
+    margin-top: 80px;
   }
 }
 header .container {
@@ -350,6 +385,16 @@ header .container {
 @media (max-width: 600px) {
   header .container {
     width: 300px;
+  }
+}
+@media (min-width: 600px) {
+  header .container {
+    width: 300px;
+  }
+}
+@media (min-width: 1151px) {
+  header .container {
+    width: 500px;
   }
 }
 header .container h1, header .container h2, header .container p {
@@ -378,6 +423,11 @@ header .container .link-github {
     max-width: 50%;
   }
 }
+@media (min-width: 600px) {
+  header .container .link-github {
+    max-width: 50%;
+  }
+}
 header .container .link-github svg {
   width: 20px;
   margin-right: 10px;
@@ -397,7 +447,6 @@ header .container .link-github.white-hover:hover {
   border-color: #fff;
 }
 
-/* Animation inspired by: https://codepen.io/prakash-prajapati/pen/ZEEWrvY */
 :root {
   --color-primary: #FAFAFA;
   --color-primary-alt: #E11D48;
@@ -423,63 +472,40 @@ nav {
   width: 100%;
   border-bottom: 5px solid #E11D48;
 }
-nav ul {
-  display: flex;
-  justify-content: center;
-  padding-left: 0;
-}
 @media (max-width: 600px) {
+  nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    padding-left: 0;
+  }
+}
+@media (min-width: 600px) {
+  nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    padding-left: 0;
+  }
+}
+@media (max-width: 1150px) and (min-width: 601px) {
   nav ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
+    padding-left: 0;
+  }
+}
+@media (min-width: 1151px) {
+  nav ul {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
   }
 }
 nav ul li {
   margin: 10px;
   padding: 10px;
-}
-nav ul li:hover:nth-child(1) a {
-  background: #e55039;
-  color: #fff;
-}
-nav ul li:hover:nth-child(2) a {
-  background: #3c6382;
-  color: #fff;
-}
-nav ul li:hover:nth-child(3) a {
-  background: #b71540;
-  color: #fff;
-}
-nav ul li:hover:nth-child(4) a {
-  background: #0c2461;
-  color: #fff;
-}
-nav ul li:hover:nth-child(5) a {
-  background: #fa983a;
-  color: #fff;
-}
-nav ul li:hover:nth-child(6) a {
-  background: #e55039;
-  color: #fff;
-}
-nav ul li:nth-child(1) a:before, nav ul li:nth-child(1) a:after {
-  border-color: #e55039;
-}
-nav ul li:nth-child(2) a:before, nav ul li:nth-child(2) a:after {
-  border-color: #3c6382;
-}
-nav ul li:nth-child(3) a:before, nav ul li:nth-child(3) a:after {
-  border-color: #b71540;
-}
-nav ul li:nth-child(4) a:before, nav ul li:nth-child(4) a:after {
-  border-color: #0c2461;
-}
-nav ul li:nth-child(5) a:before, nav ul li:nth-child(5) a:after {
-  border-color: #fa983a;
-}
-nav ul li:nth-child(6) a:before, nav ul li:nth-child(6) a:after {
-  border-color: #e55039;
 }
 nav ul li a {
   color: white;
@@ -489,34 +515,8 @@ nav ul li a {
   position: relative;
   transition: all 0.8s;
 }
-nav ul li a:before, nav ul li a:after {
-  content: "";
-  height: 10px;
-  width: 10px;
-  position: absolute;
-  transition: all 0.5s;
-}
 nav ul li a:hover {
   color: white;
-}
-nav ul li a:hover:before, nav ul li a:hover:after {
-  height: 100%;
-  width: 100%;
-  transform: rotate(360deg);
-}
-nav ul li a:before {
-  top: 0;
-  left: 0;
-  border-top: 2px solid yellow;
-  border-left: 2px solid yellow;
-  transform-origin: left;
-}
-nav ul li a:after {
-  bottom: 0;
-  right: 0;
-  border-bottom: 2px solid yellow;
-  border-right: 2px solid yellow;
-  transform-origin: right;
 }
 
 :root {
@@ -569,7 +569,7 @@ nav ul li a:after {
   color: #FAFAFA;
 }
 .profile .container ul li a {
-  color: #E11D48;
+  color: #EF8198;
   text-decoration: none;
 }
 .profile .container ul li a:hover {
@@ -577,7 +577,7 @@ nav ul li a:after {
 }
 .profile .container a {
   display: block;
-  color: #E11D48;
+  color: #EF8198;
   text-decoration: none;
   margin: 10px;
   border-radius: 3px;
@@ -618,7 +618,6 @@ nav ul li a:after {
 #styles .container {
   background-color: #1C1917;
   width: 400px;
-  /* Set the container width */
   padding: 20px;
   display: flex;
   align-items: center;
@@ -644,7 +643,7 @@ nav ul li a:after {
 }
 #styles .container .features li span a {
   display: block;
-  color: #E11D48;
+  color: #EF8198;
   text-decoration: none;
   margin: 10px;
   border-radius: 3px;

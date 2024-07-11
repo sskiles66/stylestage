@@ -9,8 +9,8 @@
   justify-content: space-evenly;
 
   .container {
-    width: 45%; // Two-column layout on larger screens
-    margin: 10px; // Add margin to space out cards
+    width: 45%; 
+    margin: 10px; 
 
     background-color: $color-card;
     padding: 20px;
@@ -27,7 +27,7 @@
     }
 
     a {
-      color: $color-primary-alt;
+      color: $color-contrast;
       text-decoration: none;
 
       &:hover {
