@@ -381,9 +381,8 @@ header .container .link-github {
 header .container .link-github svg {
   width: 20px;
   margin-right: 10px;
-  fill: #FAFAFA;
+  fill: #E11D48;
   transition: fill 0.3s ease, transform 0.3s ease;
-  mask: url("#svgMask");
 }
 header .container .link-github:hover {
   background-color: #E11D48;
@@ -396,17 +395,6 @@ header .container .link-github:hover svg {
 }
 header .container .link-github.white-hover:hover {
   border-color: #fff;
-}
-
-svg.mask {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-
-rect.mask-background {
-  fill: #09090B;
 }
 
 /* Animation inspired by: https://codepen.io/prakash-prajapati/pen/ZEEWrvY */

@@ -47,7 +47,7 @@ header {
       margin: 30px auto;
       padding: 10px 0;
       border-radius: 10px;
-      border: 2px solid transparent;
+      border: 2px solid transparent;  // initial border
       transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 
       @include mixins.respond(small) {
@@ -57,39 +57,26 @@ header {
       svg {
         width: 20px;
         margin-right: 10px;
-        fill: $color-primary;
+        fill: $color-primary-alt;
         transition: fill 0.3s ease, transform 0.3s ease;
-
-        mask: url("#svgMask");
       }
 
       &:hover {
         background-color: $color-primary-alt;
         color: $color-primary;
-        border-color: #000;
+        border-color: #000;  // change border to black on hover
 
         svg {
           fill: $color-primary;
-          transform: rotate(360deg);
+          transform: rotate(360deg);  // spin the star on hover
         }
       }
 
       &.white-hover {
         &:hover {
-          border-color: #fff;
+          border-color: #fff;  // change border to white on hover
         }
       }
     }
   }
-}
-
-svg.mask {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-}
-
-rect.mask-background {
-  fill: $color-background; 
 }
