@@ -1,35 +1,95 @@
+/* Animation inspired by: https://codepen.io/prakash-prajapati/pen/ZEEWrvY */
 @use "../compositionRelatedStyles/mixins" as mixins;
-@import "../utilityStyles/theme"; 
+@import "../utilityStyles/theme";
 
 nav {
   background-color: $color-background;
   position: fixed;
   top: 0;
   width: 100%;
-  border-bottom: 5px $color-primary-alt solid;
+  border-bottom: 5px solid $color-primary-alt;
   
   ul {
     display: flex;
     justify-content: center;
-
+    padding-left: 0;
+    
     @include mixins.respond(small) {
-      padding-left: 0;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       justify-items: center;
     }
 
-    li{
+    li {
       margin: 10px;
       padding: 10px;
 
-      a{
-        color:white; 
-        text-decoration: none;
+            &:hover {
+        &:nth-child(1) a {background: #e55039;color: #fff;}
+        &:nth-child(2) a {background: #3c6382;color: #fff;}
+        &:nth-child(3) a {background: #b71540;color: #fff;}
+        &:nth-child(4) a {background: #0c2461;color: #fff;}
+        &:nth-child(5) a {background: #fa983a;color: #fff;}     
+        &:nth-child(6) a {background: #e55039;color: #fff;}   
       }
 
+      &:nth-child(1) a:before,
+      &:nth-child(1) a:after { border-color: #e55039; }
+      &:nth-child(2) a:before,
+      &:nth-child(2) a:after { border-color: #3c6382; }
+      &:nth-child(3) a:before,
+      &:nth-child(3) a:after { border-color: #b71540; }
+      &:nth-child(4) a:before,
+      &:nth-child(4) a:after { border-color: #0c2461; }
+      &:nth-child(5) a:before,
+      &:nth-child(5) a:after { border-color: #fa983a; }
+      &:nth-child(6) a:before,
+      &:nth-child(6) a:after { border-color: #e55039; }
+
+      a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 12px;
+        margin: 0 30px;
+        position: relative;
+        transition: all 0.8s;
+
+        &:before,
+        &:after {
+          content: "";
+          height: 10px;
+          width: 10px;
+          position: absolute;
+          transition: all 0.5s;
+        }
+
+        &:hover {
+          color: white;
+          &:before,
+          &:after {
+            height: 100%;
+            width: 100%;
+            transform: rotate(360deg);
+          }
+        }
+
+        &:before {
+          top: 0;
+          left: 0;
+          border-top: 2px solid yellow;
+          border-left: 2px solid yellow;
+          transform-origin: left;
+        }
+        
+        &:after {
+          bottom: 0;
+          right: 0;
+          border-bottom: 2px solid yellow;
+          border-right: 2px solid yellow;
+          transform-origin: right;
+        }
+      }
     }
-
   }
-
 }
+

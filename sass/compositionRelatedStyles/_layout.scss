@@ -8,3 +8,11 @@ body {
   display: none;
 }
 
+.link-github svg path {
+  transform-origin: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.link-github svg:hover path {
+  transform: rotate(360deg);
+}

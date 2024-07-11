@@ -21,7 +21,7 @@ li {
   --color-background: #09090B;
   --color-text: #afafaf;
   --color-light: #fff;
-  --color-anchor: #FAFAFA;
+  --color-anchor: color(primary);
   --font-family: "Baloo 2", sans-serif;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
@@ -39,7 +39,7 @@ li {
   --color-background: #09090B;
   --color-text: #afafaf;
   --color-light: #fff;
-  --color-anchor: #FAFAFA;
+  --color-anchor: color(primary);
   --font-family: "Baloo 2", sans-serif;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
@@ -111,7 +111,7 @@ li {
   --color-background: #09090B;
   --color-text: #afafaf;
   --color-light: #fff;
-  --color-anchor: #FAFAFA;
+  --color-anchor: color(primary);
   --font-family: "Baloo 2", sans-serif;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
@@ -126,7 +126,6 @@ li {
   background-color: var(--color-background);
   padding-bottom: 150px;
 }
-
 #contribute .container:first-child {
   padding: 25px;
   text-align: center;
@@ -134,26 +133,21 @@ li {
   max-width: 800px;
   margin: 0px auto;
 }
-
 #contribute .container:first-child h2 {
   padding-bottom: 20px;
 }
-
 #contribute .container:first-child h2,
-p {
+#contribute .container:first-child p {
   color: #FAFAFA;
 }
-
 #contribute .container:first-child a {
   color: #d42257;
   transition: 0.3s ease;
   text-decoration: none;
 }
-
 #contribute .container:first-child a:hover {
   color: #FAFAFA;
 }
-
 #contribute .container:nth-child(2) {
   padding: 25px;
   color: #FAFAFA;
@@ -165,18 +159,15 @@ p {
   max-width: 850px;
   margin: 0px auto;
 }
-
 #contribute .container:nth-child(2) ol {
   display: inline-block;
   text-align: left;
 }
-
 #contribute .container:nth-child(2) a {
   color: #d42257;
   transition: 0.3s ease;
   text-decoration: none;
 }
-
 #contribute .container:nth-child(2) a:hover {
   color: #FAFAFA;
 }
@@ -188,7 +179,7 @@ p {
   --color-background: #09090B;
   --color-text: #afafaf;
   --color-light: #fff;
-  --color-anchor: #FAFAFA;
+  --color-anchor: color(primary);
   --font-family: "Baloo 2", sans-serif;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
@@ -261,7 +252,7 @@ p {
   --color-background: #09090B;
   --color-text: #afafaf;
   --color-light: #fff;
-  --color-anchor: #FAFAFA;
+  --color-anchor: color(primary);
   --font-family: "Baloo 2", sans-serif;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
@@ -322,7 +313,7 @@ p {
   --color-background: #09090B;
   --color-text: #afafaf;
   --color-light: #fff;
-  --color-anchor: #FAFAFA;
+  --color-anchor: color(primary);
   --font-family: "Baloo 2", sans-serif;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
@@ -379,6 +370,8 @@ header .container .link-github {
   margin: 30px auto;
   padding: 10px 0;
   border-radius: 10px;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 @media (max-width: 600px) {
   header .container .link-github {
@@ -388,9 +381,35 @@ header .container .link-github {
 header .container .link-github svg {
   width: 20px;
   margin-right: 10px;
-  fill: #E11D48;
+  fill: #FAFAFA;
+  transition: fill 0.3s ease, transform 0.3s ease;
+  mask: url("#svgMask");
+}
+header .container .link-github:hover {
+  background-color: #E11D48;
+  color: #FAFAFA;
+  border-color: #000;
+}
+header .container .link-github:hover svg {
+  fill: #FAFAFA;
+  transform: rotate(360deg);
+}
+header .container .link-github.white-hover:hover {
+  border-color: #fff;
 }
 
+svg.mask {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+rect.mask-background {
+  fill: #09090B;
+}
+
+/* Animation inspired by: https://codepen.io/prakash-prajapati/pen/ZEEWrvY */
 :root {
   --color-primary: #FAFAFA;
   --color-primary-alt: #E11D48;
@@ -398,7 +417,7 @@ header .container .link-github svg {
   --color-background: #09090B;
   --color-text: #afafaf;
   --color-light: #fff;
-  --color-anchor: #FAFAFA;
+  --color-anchor: color(primary);
   --font-family: "Baloo 2", sans-serif;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
@@ -414,17 +433,17 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  border-bottom: 5px #E11D48 solid;
+  border-bottom: 5px solid #E11D48;
 }
 nav ul {
   display: flex;
   justify-content: center;
+  padding-left: 0;
 }
 @media (max-width: 600px) {
   nav ul {
-    padding-left: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
   }
 }
@@ -432,9 +451,84 @@ nav ul li {
   margin: 10px;
   padding: 10px;
 }
+nav ul li:hover:nth-child(1) a {
+  background: #e55039;
+  color: #fff;
+}
+nav ul li:hover:nth-child(2) a {
+  background: #3c6382;
+  color: #fff;
+}
+nav ul li:hover:nth-child(3) a {
+  background: #b71540;
+  color: #fff;
+}
+nav ul li:hover:nth-child(4) a {
+  background: #0c2461;
+  color: #fff;
+}
+nav ul li:hover:nth-child(5) a {
+  background: #fa983a;
+  color: #fff;
+}
+nav ul li:hover:nth-child(6) a {
+  background: #e55039;
+  color: #fff;
+}
+nav ul li:nth-child(1) a:before, nav ul li:nth-child(1) a:after {
+  border-color: #e55039;
+}
+nav ul li:nth-child(2) a:before, nav ul li:nth-child(2) a:after {
+  border-color: #3c6382;
+}
+nav ul li:nth-child(3) a:before, nav ul li:nth-child(3) a:after {
+  border-color: #b71540;
+}
+nav ul li:nth-child(4) a:before, nav ul li:nth-child(4) a:after {
+  border-color: #0c2461;
+}
+nav ul li:nth-child(5) a:before, nav ul li:nth-child(5) a:after {
+  border-color: #fa983a;
+}
+nav ul li:nth-child(6) a:before, nav ul li:nth-child(6) a:after {
+  border-color: #e55039;
+}
 nav ul li a {
   color: white;
   text-decoration: none;
+  padding: 10px 12px;
+  margin: 0 30px;
+  position: relative;
+  transition: all 0.8s;
+}
+nav ul li a:before, nav ul li a:after {
+  content: "";
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  transition: all 0.5s;
+}
+nav ul li a:hover {
+  color: white;
+}
+nav ul li a:hover:before, nav ul li a:hover:after {
+  height: 100%;
+  width: 100%;
+  transform: rotate(360deg);
+}
+nav ul li a:before {
+  top: 0;
+  left: 0;
+  border-top: 2px solid yellow;
+  border-left: 2px solid yellow;
+  transform-origin: left;
+}
+nav ul li a:after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid yellow;
+  border-right: 2px solid yellow;
+  transform-origin: right;
 }
 
 :root {
@@ -444,7 +538,7 @@ nav ul li a {
   --color-background: #09090B;
   --color-text: #afafaf;
   --color-light: #fff;
-  --color-anchor: #FAFAFA;
+  --color-anchor: color(primary);
   --font-family: "Baloo 2", sans-serif;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
@@ -514,7 +608,7 @@ nav ul li a {
   --color-background: #09090B;
   --color-text: #afafaf;
   --color-light: #fff;
-  --color-anchor: #FAFAFA;
+  --color-anchor: color(primary);
   --font-family: "Baloo 2", sans-serif;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
@@ -596,7 +690,7 @@ nav ul li a {
   --color-background: #09090B;
   --color-text: #afafaf;
   --color-light: #fff;
-  --color-anchor: #FAFAFA;
+  --color-anchor: color(primary);
   --font-family: "Baloo 2", sans-serif;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
@@ -613,4 +707,13 @@ body {
 
 .skip-link {
   display: none;
+}
+
+.link-github svg path {
+  transform-origin: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.link-github svg:hover path {
+  transform: rotate(360deg);
 }

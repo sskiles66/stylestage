@@ -12,10 +12,11 @@ $brand-colors: (
 
 $color-body: scale-color(
   $color-primary,
-  $lightness: -30%,
-  $saturation: -50%
+  $lightness: -30%,  // Adjust lightness as needed
+  $saturation: -50% // Adjust saturation as needed
 ) !default;
-$color-gray: mix(#767676, $color-body, 70%) !default;
+
+$color-gray: mix(#767676, $color-body, 50%) !default;
 
 $colors: map-merge(
   $brand-colors,
@@ -26,15 +27,8 @@ $colors: map-merge(
   )
 );
 
-@function color($key) {
-  @return map-get($colors, $key);
-}
-
-@function svgColor($color) {
-  @return "%23" + str-slice("#{color($color)}", 2, -1);
-}
-
 $link-color: color(primary) !default;
+
 $border-radius: 8px !default;
 
 $font-weight-strong: 500 !default;
