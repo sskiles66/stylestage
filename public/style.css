@@ -475,6 +475,9 @@ nav {
   width: 100%;
   border-bottom: 5px solid #E11D48;
 }
+nav ul {
+  list-style-type: none;
+}
 @media (max-width: 600px) {
   nav ul {
     display: grid;
