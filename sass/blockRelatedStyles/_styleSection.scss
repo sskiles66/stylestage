@@ -12,7 +12,7 @@
 
   .container {
     background-color: $color-card;
-    width: 400px; 
+    width: 400px;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -37,38 +37,38 @@
           color: $color-primary;
           margin-bottom: 10px;
 
-    a {
-      display: block;
-      color: $color-contrast;
-      text-decoration: none;
-      margin: 10px;
-      border-radius: 3px;
-      padding: 10px;
-      text-align: center;
-      background-color: $color-background;
+          a {
+            display: block;
+            color: $color-contrast;
+            text-decoration: none;
+            margin: 10px;
+            border-radius: 3px;
+            padding: 10px;
+            text-align: center;
+            background-color: $color-background;
 
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+            &:hover {
+              text-decoration: underline;
+            }
+          }
         }
       }
     }
 
     .link-allstyles {
       display: block;
-      color: $color-primary-alt; 
+      color: $color-contrast;
       text-decoration: none;
       margin: 10px;
       border-radius: 3px;
-      padding: 10px 20px; 
+      padding: 10px 20px;
       text-align: center;
       background-color: $color-background;
       transition: background-color 0.3s ease-in-out;
 
       &:hover {
         background-color: $color-primary-alt;
-        color: $color-primary; 
+        color: $color-primary;
       }
     }
   }

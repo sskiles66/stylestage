@@ -357,12 +357,12 @@ header {
 }
 @media (max-width: 600px) {
   header {
-    margin-top: 200px;
+    margin-top: 180px;
   }
 }
 @media (min-width: 600px) {
   header {
-    margin-top: 200px;
+    margin-top: 180px;
   }
 }
 @media (max-width: 1150px) and (min-width: 601px) {
@@ -397,9 +397,12 @@ header .container {
     width: 500px;
   }
 }
-header .container h1, header .container h2, header .container p {
+header .container h1,
+header .container h2,
+header .container p {
   color: #FAFAFA;
   margin: 10px;
+  line-height: 1.5em;
 }
 header .container a {
   color: #FAFAFA;
@@ -478,6 +481,7 @@ nav {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     padding-left: 0;
+    font-size: smaller;
   }
 }
 @media (min-width: 600px) {
@@ -486,6 +490,7 @@ nav {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     padding-left: 0;
+    font-size: smaller;
   }
 }
 @media (max-width: 1150px) and (min-width: 601px) {
@@ -494,6 +499,7 @@ nav {
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     padding-left: 0;
+    font-size: medium;
   }
 }
 @media (min-width: 1151px) {
@@ -501,6 +507,7 @@ nav {
     display: flex;
     justify-content: center;
     padding-left: 0;
+    font-size: medium;
   }
 }
 nav ul li {
@@ -656,7 +663,7 @@ nav ul li a:hover {
 }
 #styles .container .link-allstyles {
   display: block;
-  color: #E11D48;
+  color: #EF8198;
   text-decoration: none;
   margin: 10px;
   border-radius: 3px;
@@ -693,7 +700,7 @@ body {
 }
 
 .skip-link {
-  display: none;
+  position: absolute;
 }
 
 .link-github svg path {

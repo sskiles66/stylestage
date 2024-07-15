@@ -15,7 +15,7 @@ header {
   height: 500px;
 
   @include mixins.respond(small) {
-    margin-top: 200px;
+    margin-top: 180px;
   }
 
   @include mixins.respond(medium) {
@@ -41,9 +41,12 @@ header {
       width: 500px;
     }
 
-    h1, h2, p {
+    h1,
+    h2,
+    p {
       color: $color-primary;
       margin: 10px;
+      line-height: 1.5em;
     }
 
     a {
@@ -61,7 +64,7 @@ header {
       margin: 30px auto;
       padding: 10px 0;
       border-radius: 10px;
-      border: 2px solid transparent;  
+      border: 2px solid transparent;
       transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 
       @include mixins.respond(small) {
@@ -78,17 +81,17 @@ header {
       &:hover {
         background-color: $color-primary-alt;
         color: $color-primary;
-        border-color: #000; 
+        border-color: #000;
 
         svg {
           fill: $color-primary;
-          transform: rotate(360deg);  
+          transform: rotate(360deg);
         }
       }
 
       &.white-hover {
         &:hover {
-          border-color: #fff;  
+          border-color: #fff;
         }
       }
     }

@@ -15,6 +15,7 @@ nav {
       grid-template-columns: repeat(2, 1fr);
       justify-items: center;
       padding-left: 0;
+      font-size: smaller;
     }
 
     @include mixins.respond(medium) {
@@ -22,12 +23,14 @@ nav {
       grid-template-columns: repeat(3, 1fr);
       justify-items: center;
       padding-left: 0;
+      font-size: medium;
     }
 
     @include mixins.respond(large) {
       display: flex;
       justify-content: center;
       padding-left: 0;
+      font-size: medium;
     }
 
     li {
